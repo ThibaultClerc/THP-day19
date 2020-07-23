@@ -9,7 +9,7 @@ class Application
   def welcome_screen
     puts ""
     puts ""
-    puts " ~~~~~~~~~~~ BIENVENUE SUR TIC TAC TOE ~~~~~~~~~~~~~~~~~~    |"
+    puts " ~~~~~~~~~~~~~~~~~~BIENVENUE SUR TIC TAC TOE ~~~~~~~~~~~~~~~~~"
     puts "|                                                             |"
     puts " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     puts ""
@@ -30,24 +30,19 @@ class Application
 
 
   def the_game
-    #while !@my_game.board.is_finished?
-    #a=0
     while @my_game.board.is_finished? == false
       @my_game.player_choose_a_case(@my_game.whose_turn_is_it?)
       @my_game.board.main_board
-      puts @my_game.board.is_finished?
-    puts  @my_game.board.turns += 1
-      #a += 1
+      puts "Nous sommes actuellement au tour : #{@my_game.board.turns += 1}"
     end
 
   end
 
   def perform
-    puts @my_game.board.class
     welcome_screen
     players_setup
     players_statement
     the_game
-  @my_game.end_game
+    @my_game.end_game
   end
 end

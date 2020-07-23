@@ -8,5 +8,4 @@ require 'board'
 require 'board_case'
 require 'application'
 
-
 Application.new.perform

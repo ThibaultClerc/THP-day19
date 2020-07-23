@@ -3,7 +3,7 @@ class Player
 
   @@player_count = 0
 
-  def initialize(name)
+  def initialize(name) #Permet d'attribuer un symbol à un joueur
     @@player_count += 1
     @name = name
     if @@player_count == 1
