@@ -3,9 +3,9 @@ class Player
 
   @@player_count = 0
 
-  def initialize(player)
+  def initialize(name)
     @@player_count += 1
-    @player = player
+    @name = name
     if @@player_count == 1
       @symbol = "X"
     else
