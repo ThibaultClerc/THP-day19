@@ -41,7 +41,6 @@ class Board
             @all_boardcases[i].case_statement = symbol
         end
       end
-      p @all_boardcases
       return @all_boardcases
   end
 
