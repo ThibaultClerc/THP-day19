@@ -1,6 +1,6 @@
 class Game
 
-  attr_accessor :player1, :player2, :which_player_plays
+  attr_accessor :player1, :player2, :which_player_plays, :board, :turns
 
   def initialize
     @players = []
@@ -38,13 +38,23 @@ class Game
     @board = Board.new
   end
 
-  def player_choose_a_case
+  def whose_turn_is_it?
+    if @board.turns.odd?
+      @player1
+      puts "C'est à #{@player1.name} de jouer !"
+    else
+      @player2
+      puts "C'est à #{@player2.name} de jouer !"
+    end
+  end
+
+  def player_choose_a_case(player_to_play) #change le statement de la case choisie en X ou O
     puts "Choisi une case"
     chosen_case = gets.chomp
     (0..2).each do |i|
       (0..2).each do |j|
-        if @all_boardcases[i][j].position == chosen_case
-          @all_boardcases[i][j].case_x_or_o(@player1.symbol)
+        if @board.all_boardcases[i][j].position == chosen_case
+          @board.all_boardcases[i][j].case_x_or_o(player_to_play.symbol)
         end
       end
     end

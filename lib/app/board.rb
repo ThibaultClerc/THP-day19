@@ -1,6 +1,6 @@
 class Board
 
-  attr_accessor :all_boardcases
+  attr_accessor :all_boardcases, :turns
 
   # Toutes les cases du board non assignées
   @@all_positions = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"]
@@ -21,7 +21,7 @@ class Board
   def main_board_matrice
     for i in 0..2#i : line
       for j in 0..2 #j : column
-         @all_boardcases[i][j] = @all_boardcases[i][j]#.case_statement
+         @all_boardcases[i][j] = @all_boardcases[i][j]                                   #.case_statement
       end
     end
     return @all_boardcases
@@ -30,11 +30,11 @@ class Board
   def main_board
     main_board_matrice
       puts ""
-      puts "      #{@all_boardcases[0][0]}    | #{@all_boardcases[0][1]}    |   #{@all_boardcases[0][2]}       "
+      puts "      #{@all_boardcases[0][0].case_statement}    | #{@all_boardcases[0][1].case_statement}    |   #{@all_boardcases[0][2].case_statement}       "
       puts "      -----------------      "
-      puts "      #{@all_boardcases[1][0]}    | #{@all_boardcases[1][1]}    |   #{@all_boardcases[1][2]}       "
+      puts "      #{@all_boardcases[1][0].case_statement}    | #{@all_boardcases[1][1].case_statement}    |   #{@all_boardcases[1][2].case_statement}       "
       puts "      -----------------      "
-      puts "      #{@all_boardcases[2][0]}    | #{@all_boardcases[2][1]}    |   #{@all_boardcases[2][2]}       "
+      puts "      #{@all_boardcases[2][0].case_statement}    | #{@all_boardcases[2][1].case_statement}    |   #{@all_boardcases[2][2].case_statement}       "
       puts ""
   end
 
