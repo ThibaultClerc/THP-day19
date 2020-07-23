@@ -7,11 +7,6 @@ require 'player'
 require 'board'
 require 'board_case'
 require 'application'
-# require 'show'
+
 
 Application.new.perform
-
-
-
-# Application.new.perform
-
