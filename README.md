@@ -10,6 +10,6 @@ It contains multiple files each containing a class embodying an object :
   - player
   - board_case
 
-##To run the game:
+## To run the game:
   - launch 'bundle install'
   - launch 'ruby app.rb'
